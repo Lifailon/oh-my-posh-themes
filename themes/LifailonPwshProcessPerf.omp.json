@@ -1,0 +1,81 @@
+{
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#00C6F7",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "template": "⌚ {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        },
+        {
+          "foreground": "#CD4277",
+          "properties": {
+            "threshold": 0
+          },
+          "template": "{{ .FormattedMs }} ",
+          "style": "diamond",
+          "leading_diamond": "⌛ ",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#00FF7F",
+          "template": "💻 {{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "#FFBD00",
+          "template": "🚩 {{ .Shell }} >_ {{ .ShellVersion }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "#FF7F50",
+          "properties": {
+            "fetch_status": true,
+            "branch_icon": ""
+          },
+          "template": "{{ .RepoName }} ({{ .HEAD }}) {{ .Working.String }} ",
+          "style": "diamond",
+          "leading_diamond": "🍒 ",
+          "type": "git"
+        },
+        {
+          "foreground": "#FFBD00",
+          "template": "⚠️ Exit code: {{ .Code }} ({{ .Code | hresult }})",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#00C6F7",
+          "template": "CPU: {{ .Env.POSH_CPU_USE }} | MEM: {{ .Env.POSH_MEM_USE }} | MEM PEAK: {{ .Env.POSH_MEM_USE_PEAK }} | Handles: {{ .Env.POSH_Handles }} ",
+          "type": "session"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#00C6F7",
+          "properties": {
+            "style": "full"
+          },
+          "template": "{{ .Path }} > ",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}

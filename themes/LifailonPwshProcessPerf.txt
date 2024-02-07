@@ -1,0 +1,8 @@
+function Set-EnvVar {
+    $env:POSH_CPU_USE = $(Get-Process -id $($env:POSH_PID)).CPU
+    $env:POSH_MEM_USE = $($(Get-Process -id $($env:POSH_PID)).WorkingSet / 1mb).ToString("0.00 Mb")
+    $env:POSH_MEM_USE_PEAK = $($(Get-Process -id $($env:POSH_PID)).PeakWorkingSet / 1mb).ToString("0.00 Mb")
+    $end:POSH_Handles = $(Get-Process -id $($env:POSH_PID)).Handles
+}
+New-Alias -Name "Set-PoshContext" -Value "Set-EnvVar" -Scope Global -Force
+oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/Lifailon/oh-my-posh-themes/rsa/themes/LifailonPwshProcessPerf.omp.json' | Invoke-Expression
