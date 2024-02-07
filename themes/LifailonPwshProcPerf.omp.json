@@ -55,7 +55,7 @@
       "segments": [
         {
           "foreground": "#00C6F7",
-          "template": "CPU: {{ .Env.POSH_CPU_USE }} | MEM: {{ .Env.POSH_MEM_USE }} | MEM PEAK: {{ .Env.POSH_MEM_USE_PEAK }} | Handles: {{ .Env.POSH_Handles }} ",
+          "template": "CPU: {{ .Env.POSH_CPU_USE }} | MEM: {{ .Env.POSH_MEM_USE }} ",
           "type": "session"
         }
       ],
