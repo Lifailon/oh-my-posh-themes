@@ -1,4 +1,4 @@
-function Set-EnvVariable {
+function Global:Set-EnvVariable {
     $env:BATTERY = "$($(Get-CimInstance -Class Win32_Battery).EstimatedChargeRemaining)"
     $env:CPU_USE = "$([string]$(Get-CimInstance Win32_PerfFormattedData_PerfOS_Processor | Where-Object Name -eq "_Total").PercentProcessorTime)"
     $Memory = Get-CimInstance Win32_OperatingSystem

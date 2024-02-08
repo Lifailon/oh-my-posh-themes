@@ -1,4 +1,4 @@
-function Get-SensorCim {
+function Global:Get-SensorCim {
     $NameSpace   = "root/LibreHardwareMonitor"
     $Hardware = Get-CimInstance -Namespace $NameSpace -ClassName Hardware | Select-Object Name,
     HardwareType,
@@ -19,7 +19,7 @@ function Get-SensorCim {
     $Sensors | Sort-Object HardwareName,SensorType,SensorName
 }
 
-function Set-EnvVariable {
+function Global:Set-EnvVariable {
     $Sensors = Get-SensorCim
     $CPU_TEMP_PACKAGE = $Sensors | Where-Object {($_.SensorName -eq "CPU Package") -and ($_.SensorType -match "Temperature")}
     $CPU_LOAD_TOTAL   = $Sensors | Where-Object {($_.SensorName -eq "CPU Total") -and ($_.SensorType -match "Load")}
