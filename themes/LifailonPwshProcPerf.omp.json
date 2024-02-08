@@ -53,12 +53,12 @@
       "segments": [
         {
           "foreground": "#00C6F7",
-          "template": "▶ {{ .Env.POSH_RUN_TIME  }} ({{ .Env.POSH_PROC_TIME }}) | WS: {{ .Env.POSH_MEM_USE }}/{{ .Env.POSH_MEM_USE_ALL }}Mb ({{ .Env.POSH_PROCESS_COUNT }}) ",
+          "template": "{{ .Env.POSH_RUN_TIME  }} ({{ .Env.POSH_PROC_TIME }}) | WS: {{ .Env.POSH_MEM_USE }}/{{ .Env.POSH_MEM_USE_ALL }}Mb ({{ .Env.POSH_PROCESS_COUNT }}) ",
           "type": "session"
         },
         {
           "foreground": "#00C6F7",
-          "template": "| MEM: {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}Gb) ◀",
+          "template": "| MEM: {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}Gb)",
           "type": "sysinfo"
         }
       ],
