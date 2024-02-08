@@ -55,7 +55,7 @@
       "segments": [
         {
           "foreground": "#00C6F7",
-          "template": "CPU: {{ .Env.CPU_USE }} | MEM: {{ .Env.MEM_USE }} | ⬇ {{ .Env.NET_Down }} ⬆ {{ .Env.NET_Up }} ",
+          "template": "🔋 {{ .Env.BATTERY }} | CPU: {{ .Env.CPU_USE }} | MEM: {{ .Env.MEM_USE }} | ⬇ {{ .Env.NET_Down }} ⬆ {{ .Env.NET_Up }}",
           "type": "session"
         }
       ],

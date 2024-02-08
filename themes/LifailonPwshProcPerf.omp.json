@@ -55,7 +55,7 @@
       "segments": [
         {
           "foreground": "#00C6F7",
-          "template": "Time: {{ .Env.POSH_RUN_TIME  }} ({{ .Env.POSH_PROC_TIME }}) | WS: {{ .Env.POSH_MEM_USE }}/{{ .Env.POSH_MEM_USE_ALL }}Mb ({{ .Env.POSH_PROCESS_COUNT }}) ",
+          "template": "⚡ {{ .Env.POSH_RUN_TIME  }} ({{ .Env.POSH_PROC_TIME }}) | WS: {{ .Env.POSH_MEM_USE }}/{{ .Env.POSH_MEM_USE_ALL }}Mb ({{ .Env.POSH_PROCESS_COUNT }}) ",
           "type": "session"
         },
         {
