@@ -1,3 +1,3 @@
 # oh-my-posh-themes
 
-test
+Themes for oh-my-posh displaying system performance sensors.
