@@ -1,13 +1,13 @@
 # oh-my-posh-themes-performance
 
-Themes for [oh-my-posh](https://github.com/jandedobbeleer/oh-my-posh) displaying system performance sensors. You can use the PowerShell module to update and save the theme.
+Themes for [oh-my-posh](https://github.com/jandedobbeleer/oh-my-posh) displaying system performance sensors (current speed of network interfaces, CPU load and temperature, and PowerShell Core processes activity). You use the PowerShell module to update and save the theme.
 
 Themes:
 - [System-Sensors](#system-sensors)
 - [System-Performance](#system-performance)
 - [Pwsh-Process-Performance](#pwsh-process-performance)
 
-![Image alt](https://github.com/Lifailon/oh-my-posh-themes-performance/tree/rsa/image/Example.jpg)
+![Image alt](https://github.com/Lifailon/oh-my-posh-themes-performance/blob/rsa/image/Example.jpg)
 
 ## 🚀 Install
 
@@ -20,7 +20,7 @@ Install-Module themes-performance -Repository NuGet
 Import-Module themes-performance
 ```
 
-Choose a theme (theme is loaded directly from the GitHub repository):
+Choose a theme (theme and script is loaded directly from the GitHub repository, nothing is saved in the system):
 
 ```PowerShell
 Set-PoshTheme -Theme System-Sensors
@@ -30,7 +30,7 @@ Set-PoshTheme -Theme Pwsh-Process-Performance
 
 To save the theme to the system for offline use and set it as the default profile, use the `Save` parameter.
 
-💡 Note, this will overwrite your default profile
+💡 Note, this will overwrite your default profile (You can check its contents using the `notepad $Profile` command).
 
 ```PowerShell
 Set-PoshTheme -Theme System-Sensors -Save
@@ -70,3 +70,7 @@ Performance of PowerShell Core processes.
 ```
 
 Running time of the currently running process pwsh (CPU time consumption of the current process) | Working set of physical memory of the current process/all running processes pwsh (total number of running processes pwsh) | RAM from sysinfo (via the oh-my-posh plug-in)
+
+## 📊 Example
+
+![Image alt](https://github.com/Lifailon/oh-my-posh-themes-performance/blob/rsa/image/Example.gif)
