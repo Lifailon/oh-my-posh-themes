@@ -9,9 +9,9 @@ Themes:
 
 ## 🚀 Install
 
-```
+```PowerShell
 Install-Module themes-performance -Repository NuGet
-import-Module themes-performance
+Import-Module themes-performance
 ```
 
 Choose a theme (theme is loaded directly from the GitHub repository):
