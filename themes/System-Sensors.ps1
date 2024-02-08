@@ -1,5 +1,4 @@
 function Get-SensorCim {
-    #$NameSpace   = "root/OpenHardwareMonitor"
     $NameSpace   = "root/LibreHardwareMonitor"
     $Hardware = Get-CimInstance -Namespace $NameSpace -ClassName Hardware | Select-Object Name,
     HardwareType,
