@@ -47,6 +47,8 @@ Get sensors from the running [LibreHardwareMonitor](https://github.com/LibreHard
 >
 ```
 
+Displays sensors for CPU load and temperature, as well as the download and upload speed of the active network interface.
+
 ## System-Performance
 
 Get performance data directly from the system through **WMI/CIM**. Works noticeably slower when compared to the **System-Sensors** theme. No dependencies required.
@@ -60,9 +62,9 @@ Get performance data directly from the system through **WMI/CIM**. Works noticea
 
 Performance of PowerShell Core processes.
 
-Running time of the currently running process pwsh (CPU time consumption of the current process) | Working set of physical memory of the current process/all running processes pwsh (total number of running processes pwsh) | RAM from sysinfo (via the oh-my-posh plug-in)
-
 ```PowerShell
 ⌚ 13:48 ⌛ 2ms 📁 ~     00:10:51 (00:00:03) | WS: 131/429Mb (4) | MEM: 80% (12/15Gb)
 >
 ```
+
+Running time of the currently running process pwsh (CPU time consumption of the current process) | Working set of physical memory of the current process/all running processes pwsh (total number of running processes pwsh) | RAM from sysinfo (via the oh-my-posh plug-in)
