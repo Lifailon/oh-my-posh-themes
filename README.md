@@ -1,4 +1,4 @@
-# oh-my-posh-themes
+# oh-my-posh-themes-performance
 
 Themes for oh-my-posh displaying system performance sensors. You can use the PowerShell module to update and save the theme.
 
@@ -10,7 +10,8 @@ Themes:
 ## 🚀 Install
 
 ```
-Install-Module oh-my-posh-themes-performance
+Install-Module themes-performance -Repository NuGet
+import-Module themes-performance
 ```
 
 Choose a theme (theme is loaded directly from the GitHub repository):

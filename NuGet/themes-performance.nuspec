@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>themes-performance</id>
+    <version>0.1.0</version>
+    <authors>Lifailon</authors>
+    <owners>Lifailon</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/Lifailon/oh-my-posh-themes-performance</projectUrl>
+    <description>Themes for oh-my-posh displaying system performance sensors</description>
+    <tags>PowerShell,Module,oh-my-posh,theme,themes,sensor,sensors,performance,monitoring,console</tags>
+    <contentFiles>
+      <files include="themes-performance.psm1" buildAction="Content" />
+      <files include="themes-performance.psd1" buildAction="Content" />
+      <files include="README.md" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+</package>
