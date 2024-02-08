@@ -1,4 +1,8 @@
-# oh-my-posh-themes-performance
+# Themes performance for oh-my-posh
+
+[![GitHub Release](https://img.shields.io/github/v/release/Lifailon/oh-my-posh-themes-performance?display_name=release&logo=GitHub&label=GitHub&link=https%3A%2F%2Fgithub.com%2FLifailon%2Foh-my-posh-themes-performance%2F)](https://github.com/Lifailon/oh-my-posh-themes-performance)
+[![NuGet Version](https://img.shields.io/nuget/v/themes-performance?logo=NuGet&label=NuGet&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2Fthemes-performance)](https://www.nuget.org/packages/themes-performance)
+[![GitHub top language](https://img.shields.io/github/languages/top/Lifailon/oh-my-posh-themes-performance?logo=PowerShell&link=https%3A%2F%2Fgithub.com%2FPowerShell%2FPowerShell)](https://github.com/PowerShell/PowerShell)
 
 Themes for [oh-my-posh](https://github.com/jandedobbeleer/oh-my-posh) displaying system performance sensors (current speed of network interfaces, CPU load and temperature, and PowerShell Core processes activity). You use the PowerShell module to update and save the theme.
 
