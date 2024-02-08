@@ -15,13 +15,23 @@ Themes:
 
 ## 🚀 Install
 
-[Install oh-my-posh](https://ohmyposh.dev/docs/installation/windows) package any way you like, if you haven't already done so.
+[Install oh-my-posh](https://ohmyposh.dev/docs/installation/windows) package any way you like, if you haven't already done so. Like this, if you are not using a package manager:
+
+```PowerShell
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
+```
 
 Install the module from the [NuGet repository](https://www.nuget.org/packages/themes-performance):
 
 ```PowerShell
 Install-Module themes-performance -Repository NuGet
 Import-Module themes-performance
+```
+
+💡 You must have a NuGet repository registered:
+
+```PowerShell
+Register-PSRepository -Name "NuGet" -SourceLocation "https://www.nuget.org/api/v2" -InstallationPolicy Trusted
 ```
 
 Choose a theme (theme and script is loaded directly from the GitHub repository, nothing is saved in the system):
