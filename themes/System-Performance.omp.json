@@ -35,9 +35,9 @@
             "fetch_status": true,
             "branch_icon": ""
           },
-          "template": "{{ .RepoName }} ({{ .HEAD }}) {{ .Working.String }} ",
+          "template": "git({{ .HEAD }}) {{ .Working.String }} ",
           "style": "diamond",
-          "leading_diamond": "🍒 ",
+          "leading_diamond": "🔸 ",
           "type": "git"
         },
         {
