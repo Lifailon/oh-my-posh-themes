@@ -7,4 +7,4 @@ function Set-EnvVariable {
     $env:POSH_PROCESS_COUNT = $GetProcess.Count
 }
 New-Alias -Name "Set-PoshContext" -Value "Set-EnvVariable" -Scope Global -Force
-oh-my-posh init pwsh --config "https://raw.githubusercontent.com/Lifailon/oh-my-posh-themes/rsa/themes/LifailonPwshProcPerf.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "https://raw.githubusercontent.com/Lifailon/oh-my-posh-themes/rsa/themes/Pwsh-Process-Performance.omp.json" | Invoke-Expression

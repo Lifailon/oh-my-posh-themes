@@ -9,4 +9,4 @@ function Set-EnvVariable {
     $env:NET_Down = $($NetworkInterface.BytesReceivedPersec/1mb).ToString("0.000")
 }
 New-Alias -Name "Set-PoshContext" -Value "Set-EnvVariable" -Scope Global -Force
-oh-my-posh init pwsh --config "https://raw.githubusercontent.com/Lifailon/oh-my-posh-themes/rsa/themes/LifailonSysPerf.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "https://raw.githubusercontent.com/Lifailon/oh-my-posh-themes/rsa/themes/System-Performance.omp.json" | Invoke-Expression
