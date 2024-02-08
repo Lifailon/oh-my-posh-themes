@@ -26,7 +26,7 @@
           "properties": {
             "style": "full"
           },
-          "template": "📁 {{ .Path }} > ",
+          "template": "📁 {{ .Path }} ",
           "type": "path"
         },
         {
