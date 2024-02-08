@@ -22,12 +22,14 @@
           "type": "executiontime"
         },
         {
-          "foreground": "#FFD700",
-          "properties": {
-            "style": "full"
-          },
-          "template": "📁 {{ .Path }} > ",
-          "type": "path"
+          "foreground": "#00FF7F",
+          "template": "💻 {{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "#FFBD00",
+          "template": "🚩 {{ .Shell }} >_ {{ .ShellVersion }} ",
+          "type": "session"
         },
         {
           "foreground": "#FF7F50",
@@ -65,8 +67,11 @@
       "segments": [
         {
           "foreground": "#00C6F7",
-          "template": "> ",
-          "type": "session"
+          "properties": {
+            "style": "full"
+          },
+          "template": "{{ .Path }} > ",
+          "type": "path"
         }
       ],
       "type": "prompt"
