@@ -1,4 +1,4 @@
-function Set-EnvVariable {
+function Global:Set-EnvVariable {
     $GetProcess = Get-Process pwsh
     $env:POSH_RUN_TIME = $([string]([datetime](Get-Date) - $($GetProcess | Where-Object id -eq $($env:POSH_PID)).StartTime) -replace "\.\d+$")
     $env:POSH_PROC_TIME = $($GetProcess | Where-Object id -eq $($env:POSH_PID)).TotalProcessorTime.ToString() -replace "\..+"
