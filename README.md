@@ -15,7 +15,7 @@ Themes:
 
 ## 🚀 Install
 
-[Install oh-my-posh](https://ohmyposh.dev/docs/installation/windows) package any way you like, if you haven't already done so. Like this, if you are not using a package manager:
+[Install oh-my-posh](https://ohmyposh.dev/docs/installation/windows) package any way you like, if you haven't already done so. Example, if you are not using a package manager, like this:
 
 ```PowerShell
 Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
