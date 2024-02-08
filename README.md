@@ -44,7 +44,7 @@ Set-PoshTheme -Theme Pwsh-Process-Performance
 
 To save the theme to the system for offline use and set it as the default profile, use the `Save` parameter.
 
-💡 Note, this will overwrite your default profile (You can check its contents using the `notepad $Profile` command).
+💡 Note, this will overwrite your default profile (You can check its contents using the command: `notepad $Profile`).
 
 ```PowerShell
 Set-PoshTheme -Theme System-Sensors -Save
@@ -56,14 +56,14 @@ Set-PoshTheme -Theme Pwsh-Process-Performance -Save
 
 Get sensors from the running [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) application instance via WMI/CIM (Common Information Model).
 
-💡 For this theme to work, you need to have LibreHardwareMonitor installed and running.
+💡 For this theme to work, you need to have **LibreHardwareMonitor** installed and running.
 
 ```PowerShell
 ⌚ 13:48 ⌛ 2ms 📁 ~     CPU: 17% (11/63) | 81°C (74/100) | MEM: 79% (12/15Gb) | ⬇ 0,032 Mbyte/s ⬆ 0,003 Mbyte/s
 >
 ```
 
-Displays sensors for CPU load and temperature, as well as the download and upload speed of the active network interface.
+Displays sensors for CPU load and temperature, as well as the download and upload speed of the active network interface (if several network adapters are used, the activity of the busiest one will be displayed).
 
 ## System-Performance
 
@@ -83,7 +83,7 @@ Performance of PowerShell Core processes.
 >
 ```
 
-Running time of the currently running process pwsh (CPU time consumption of the current process) | Working set of physical memory of the current process/all running processes pwsh (total number of running processes pwsh) | RAM from sysinfo (via the oh-my-posh plug-in)
+Description: running time of the currently running process pwsh (CPU time consumption of the current process) | Working set of physical memory of the current process/all running processes pwsh (total number of running processes pwsh) | RAM from sysinfo (via the oh-my-posh plug-in)
 
 ## 📊 Example
 
