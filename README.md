@@ -7,6 +7,8 @@ Themes:
 - [System-Performance](#system-performance)
 - [Pwsh-Process-Performance](#pwsh-process-performance)
 
+![Image alt](https://github.com/Lifailon/oh-my-posh-themes-performance/tree/rsa/image/Example.jpg)
+
 ## 🚀 Install
 
 [Install oh-my-posh](https://ohmyposh.dev/docs/installation/windows) package any way you like, if you haven't already done so.
