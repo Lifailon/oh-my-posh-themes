@@ -59,7 +59,7 @@ Get sensors from the running [LibreHardwareMonitor](https://github.com/LibreHard
 💡 For this theme to work, you need to have **LibreHardwareMonitor** installed and running.
 
 ```PowerShell
-⌚ 13:48 ⌛ 2ms 📁 ~     CPU: 17% (11/63) | 81°C (74/100) | MEM: 79% (12/15Gb) | ⬇ 0,032 Mbyte/s ⬆ 0,003 Mbyte/s
+⌚ 11:51 ⌛ 0ms 📁 ~   💡 CPU: 13% (0/99) | 60°C (42/98) | MEM: 54% (8/15Gb) | ⬇ 0,025 Mbyte/s ⬆ 0,051 Mbyte/s
 >
 ```
 
@@ -70,7 +70,7 @@ Displays sensors for CPU load and temperature, as well as the download and uploa
 Get performance data directly from the system through **WMI/CIM**. Works noticeably slower when compared to the **System-Sensors** theme. No dependencies required.
 
 ```PowerShell
-⌚ 13:48 ⌛ 2ms 📁 ~     🔋 64% | CPU: 17% | MEM: 80% | ⬇ 0,012 Mbyte/s ⬆ 0,002 Mbyte/s
+⌚ 11:52 ⌛ 0ms 📁 ~   🔋 100% | CPU: 6% | MEM: 54% | ⬇ 34,868 Mbyte/s ⬆ 0,499 Mbyte/s
 >
 ```
 
@@ -79,11 +79,11 @@ Get performance data directly from the system through **WMI/CIM**. Works noticea
 Performance of PowerShell Core processes.
 
 ```PowerShell
-⌚ 13:48 ⌛ 2ms 📁 ~     00:10:51 (00:00:03) | WS: 131/429Mb (4) | MEM: 80% (12/15Gb)
+⌚ 11:53 ⌛ 0ms 📁 ~   💡 00:01:24 (00:00:03) | Jobs: 0/3 (✅3/❌0) | WS: 130/370Mb (3) | MEM: 52% (8/15Gb)
 >
 ```
 
-Description: running time of the currently running process pwsh (CPU time consumption of the current process) | Working set of physical memory of the current process/all running processes pwsh (total number of running processes pwsh) | RAM from sysinfo (via the oh-my-posh plug-in)
+💡 **Description:** Running time of the currently running process pwsh (CPU time consumption of the current process) | Number of background jobs: Running/All count (Completed/Failed) | Working set of physical memory of the current process/all running processes pwsh (total number of running processes pwsh) | RAM from sysinfo (via the oh-my-posh plug-in)
 
 ## 📊 Example
 
