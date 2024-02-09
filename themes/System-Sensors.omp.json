@@ -53,17 +53,17 @@
       "segments": [
         {
           "foreground": "#00C6F7",
-          "template": "CPU: {{ .Env.SENSOR_CPU_LOAD_VALUE }}% ({{ .Env.SENSOR_CPU_LOAD_MIN }}/{{ .Env.SENSOR_CPU_LOAD_MAX }}) | {{ .Env.SENSOR_CPU_TEMP_VALUE }}°C ({{ .Env.SENSOR_CPU_TEMP_MIN }}/{{ .Env.SENSOR_CPU_TEMP_MAX }}) ",
+          "template": "💡 CPU: {{ .Env.SENSOR_CPU_LOAD_VALUE }}% ({{ .Env.SENSOR_CPU_LOAD_MIN }}/{{ .Env.SENSOR_CPU_LOAD_MAX }}) | {{ .Env.SENSOR_CPU_TEMP_VALUE }}°C ({{ .Env.SENSOR_CPU_TEMP_MIN }}/{{ .Env.SENSOR_CPU_TEMP_MAX }}) | ",
           "type": "session"
         },
         {
           "foreground": "#00C6F7",
-          "template": "| MEM: {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}Gb) ",
+          "template": "MEM: {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}Gb) | ",
           "type": "sysinfo"
         },
         {
           "foreground": "#00C6F7",
-          "template": "| ⬇ {{ .Env.SENSOR_MEM_DOWNLOAD }} Mbyte/s ⬆ {{ .Env.SENSOR_MEM_UPLOAD }} Mbyte/s",
+          "template": "⬇ {{ .Env.SENSOR_MEM_DOWNLOAD }} Mbyte/s ⬆ {{ .Env.SENSOR_MEM_UPLOAD }} Mbyte/s",
           "type": "session"
         }
       ],

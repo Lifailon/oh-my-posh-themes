@@ -27,20 +27,30 @@ function Global:Set-EnvVariable {
         $Sensors | Where-Object {
             ($_.SensorName -match "Upload") -and (($_.SensorType -match "Throughput") -and ($_.Value -ne 0))
         } | Sort-Object -Property Value -Descending
-    )[0]
+    )
     $NET_DOWNLOAD_SPEED = $(
         $Sensors | Where-Object {
             ($_.SensorName -match "Download") -and (($_.SensorType -match "Throughput") -and ($_.Value -ne 0))
         } | Sort-Object -Property Value -Descending
-    )[0]
+    )
+    if ($null -eq $NET_UPLOAD_SPEED) {
+        $NET_UPLOAD_SPEED = "0,000"
+    } else {
+        $NET_UPLOAD_SPEED = $($NET_UPLOAD_SPEED[0].Value/1mb).ToString("0.000")
+    }
+    if ($null -eq $NET_DOWNLOAD_SPEED) {
+        $NET_DOWNLOAD_SPEED = "0,000"
+    } else {
+        $NET_DOWNLOAD_SPEED = $($NET_DOWNLOAD_SPEED[0].Value/1mb).ToString("0.000")
+    }
     $env:SENSOR_CPU_TEMP_VALUE = $CPU_TEMP_PACKAGE.Value
     $env:SENSOR_CPU_TEMP_MIN   = $CPU_TEMP_PACKAGE.Min
     $env:SENSOR_CPU_TEMP_MAX   = $CPU_TEMP_PACKAGE.Max
     $env:SENSOR_CPU_LOAD_VALUE = $CPU_LOAD_TOTAL.Value
     $env:SENSOR_CPU_LOAD_MIN   = $CPU_LOAD_TOTAL.Min
     $env:SENSOR_CPU_LOAD_MAX   = $CPU_LOAD_TOTAL.Max
-    $env:SENSOR_MEM_UPLOAD     = $($NET_UPLOAD_SPEED.Value/1mb).ToString("0.000")
-    $env:SENSOR_MEM_DOWNLOAD   = $($NET_DOWNLOAD_SPEED.Value/1mb).ToString("0.000")
+    $env:SENSOR_MEM_UPLOAD     = $NET_UPLOAD_SPEED
+    $env:SENSOR_MEM_DOWNLOAD   = $NET_DOWNLOAD_SPEED
 }
 
 New-Alias -Name "Set-PoshContext" -Value "Set-EnvVariable" -Scope Global -Force
