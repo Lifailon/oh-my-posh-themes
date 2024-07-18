@@ -1,0 +1,82 @@
+{
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#00C6F7",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "template": "⌚ {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        },
+        {
+          "foreground": "#CD4277",
+          "properties": {
+            "threshold": 0
+          },
+          "template": "{{ .FormattedMs }} ",
+          "style": "diamond",
+          "leading_diamond": "⌛ ",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#FFD700",
+          "properties": {
+            "style": "full"
+          },
+          "template": "📁 {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#FF7F50",
+          "properties": {
+            "fetch_status": true,
+            "branch_icon": ""
+          },
+          "template": "git({{ .HEAD }}) {{ .Working.String }} ",
+          "style": "diamond",
+          "leading_diamond": "🔸 ",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#00C6F7",
+          "template": "💻 {{ .Env.POSH_RUN_TIME  }} ({{ .Env.POSH_PROC_TIME }}) | Jobs: {{ .Env.POSH_JOB_RUNNING }} ({{ .Env.POSH_JOB_COMPLETED }}/{{.Env.POSH_JOB_FAILED}}) | WS: {{ .Env.POSH_MEM_USE }}/{{ .Env.POSH_MEM_USE_ALL }}/{{ .Env.PROC_MEM_USE_ALL }} ({{ .Env.POSH_PROCESS_COUNT }}/{{ .Env.ALL_PROCESS_COUNT }}) | ",
+          "type": "session"
+        },
+        {
+          "foreground": "#00C6F7",
+          "template": "MEM: {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}Gb)",
+          "type": "sysinfo"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#FFBD00",
+          "template": "⚠️ {{ .Code }} ",
+          "type": "status"
+        },
+        {
+          "foreground": "#00C6F7",
+          "template": "> ",
+          "type": "session"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
+
